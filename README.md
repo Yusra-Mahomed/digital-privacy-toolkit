@@ -16,7 +16,7 @@ This project is an interactive, educational toolkit designed to help users under
 
 ```bash
 cd backend
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate   
 pip install -r requirements.txt
 ```

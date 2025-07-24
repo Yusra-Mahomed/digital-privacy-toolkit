@@ -1,6 +1,5 @@
 // components/InfographicLink.js or InfographicLink.jsx
 import React from 'react';
-
 export default function InfographicLink({ href, title, description }) {
   return (
     <div className="w-full max-w-5xl mb-10">
