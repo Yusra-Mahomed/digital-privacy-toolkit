@@ -67,7 +67,7 @@ The frontend connects to the backend through REST APIs:
 - Uses [zxcvbn](https://github.com/dropbox/zxcvbn) for password strength analysis.
 - Checks breach data using [Have I Been Pwned](https://haveibeenpwned.com/API/v3).
 - Cookie & script detection is powered by a headless browser via Playwright.
-- All tools prioritize user privacy — no sensitive information is stored.
+- All tools prioritise user privacy — no sensitive information is stored.
 
 ---
 

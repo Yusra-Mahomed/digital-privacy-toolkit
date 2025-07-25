@@ -47,13 +47,6 @@ export default function Home() {
             altText="Social Exposure"
             link="/social"
           />
-          {/* <Card
-            title="Clean Up Your Footprint"
-            description="Use tools and checklists to delete old accounts and reclaim your digital privacy."
-            imgSrc={cleanupImg}
-            altText="Privacy Cleanup"
-            link="/cleanup"
-          /> */}
         </div>
       </div>
       
