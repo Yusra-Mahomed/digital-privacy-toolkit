@@ -111,7 +111,8 @@ export default function FingerprintChecker() {
     };
 
     try {
-      const res = await axios.post('http://localhost:8000/api/fingerprint/fingerprint', payload, {
+      
+      const res = axios.post(`${import.meta.env.VITE_API_URL}/api/fingerprint/fingerprint`, payload, {
         headers: { 'Content-Type': 'application/json' }
       });
       setResult(res.data);

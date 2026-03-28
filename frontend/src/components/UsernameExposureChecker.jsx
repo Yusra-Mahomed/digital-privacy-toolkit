@@ -12,7 +12,7 @@ export default function UsernameScanner() {
     setResult(null);
 
     try {
-      const res = await axios.post('http://localhost:8000/api/social/username-scan', {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/social/username-scan`, {
         username
       });
       setResult(res.data);

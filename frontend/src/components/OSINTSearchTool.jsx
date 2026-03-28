@@ -18,7 +18,7 @@ export default function OSINTSearchTool() {
     setPreviewResults(null);
 
     try {
-      const res = await axios.post('http://localhost:8000/api/social/osint-search', form);
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/social/osint-search`, form);
       setResults(res.data);
     } catch (err) {
       setResults({ error: 'Search failed.' });

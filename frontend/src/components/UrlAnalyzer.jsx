@@ -29,7 +29,7 @@ export default function UrlAnalyzer() {
 
     try {
       const response = await axios.post(
-        'http://localhost:8000/api/tracking/analyze-url',
+        `${import.meta.env.VITE_API_URL}/api/tracking/analyze-url`,
         { url }
       );
       setResult(response.data.result);
