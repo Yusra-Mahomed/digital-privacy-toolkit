@@ -164,7 +164,24 @@ export default function FingerprintChecker() {
             <>
               <p><strong>Visitor ID:</strong> {result.visitorId}</p>
               <p><strong>Components Collected:</strong> {result.components_collected}</p>
-              <p><strong>Estimated Uniqueness:</strong> {result.estimated_uniqueness}</p>
+
+              <p className="font-semibold">
+                Estimated Uniqueness: {result.estimated_uniqueness}
+              </p>
+
+              <p><strong>Score:</strong> {result.uniqueness_score}</p>
+              <p><strong>Percentile:</strong> {result.percentile}</p>
+
+              {/* WHY SECTION (biggest improvement) */}
+              <div className="mt-2">
+                <p className="font-semibold">Why this result:</p>
+                <ul className="list-disc ml-5">
+                  {result.reasons?.map((reason, i) => (
+                    <li key={i}>{reason}</li>
+                  ))}
+                </ul>
+              </div>
+
               <p><strong>Tip:</strong> {result.tip}</p>
 
               <div className="mt-4">
