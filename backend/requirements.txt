@@ -10,6 +10,7 @@ chardet==3.0.4
 charset-normalizer==3.4.2
 click==8.2.1
 colorama==0.4.6
+duckduckgo-search
 email-validator
 fastapi==0.116.1
 filelock==3.18.0
