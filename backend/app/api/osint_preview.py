@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from typing import Optional
-from ddgs import DDGS
+from duckduckgo_search import DDGS
 
 router = APIRouter()
 
