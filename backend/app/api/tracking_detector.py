@@ -3,7 +3,7 @@ from pydantic import BaseModel, HttpUrl
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 import tldextract
-from playwright.async_api import async_playwright
+import os
 
 router = APIRouter()
 
@@ -19,7 +19,22 @@ async def analyze_url(payload: URLRequest):
     url_str = str(payload.url)
     print("✅ Received request:", payload)
 
-    try:
+    try:    
+        if os.getenv("RENDER"):
+            return {
+                "message": "URL analysis limited in production",
+                "result": {
+                    "privacy_score": 0,
+                    "risk_level": "Unavailable ⚠️",
+                    "warnings": [
+                        "Tracking analysis disabled in production environment.",
+                        "Full analysis available in local development."
+                    ]
+                }
+            }
+
+        # Normal (local dev only)
+        from playwright.async_api import async_playwright
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=True)
             context = await browser.new_context()

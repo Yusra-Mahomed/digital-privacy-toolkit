@@ -44,7 +44,27 @@ npm install
 npm run dev
 ```
 
-Frontend will be available at: `http://localhost:5173`
+NOTE:
+
+Environment Variables:
+Create a .env file inside the frontend folder:
+
+For local development:
+```VITE_API_URL=http://localhost:8000```
+
+This connects your frontend to your local FastAPI backend.
+
+For production
+```VITE_API_URL=https://digital-privacy-toolkit-l3ix.onrender.com```
+
+This connects your frontend to the deployed backend.
+
+Run frontend:
+
+npm run dev
+
+Frontend will be available at:
+```http://localhost:5173```
 
 ---
 

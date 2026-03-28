@@ -4,7 +4,7 @@ import passwordImg from '../assets/password.png';
 import trackingImg from '../assets/tracking.png';
 import socialImg from '../assets/social.png';
 import cleanupImg from '../assets/clean.png';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
